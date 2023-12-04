@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel='stylesheet' type='text/css' href="css/estilos_index.css">
+</head>
+
+<body>
+    <div class="cuadrados">
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+    <div class="pantallaJuego">
+        <div id="jugador1">
+            <div id="avatarJ1"></div>
+            <div id="nombreJ1"></div>
+            <div id="puntuacionJ1">Puntuacion: 0</div>
+        </div>
+        <div id="infoSeleccion">
+            <span>Categoría:</span>
+            <div id="categoria"></div>
+            <span id="span_nivel">Nivel:</span>
+            <div id="nivel"></div>
+        </div>
+        <div id="jugador2">
+            <div id="avatarJ2"></div>
+            <div id="nombreJ2"></div>
+            <div id="puntuacionJ2">Puntuacion: 0</div>
+        </div>
+        <div class="imagen">
+            <img id="imagen" src="img/img0.png" alt="Ahorcado" />
+        </div>
+        <div id="turnoJugador"></div>
+        <div id="segundos"></div>
+        <div id="intentos">
+            Intentos restantes: <span id="intentosRestantes">6</span>
+        </div>
+        <div id="palabra_a_adivinar"></div>
+        <div id="letrasIncorrectas">Letras Incorrectas</div>
+        <div id="teclado">
+            <button class="tecla" id="botonA" onclick="adivinarLetra('a')" draggable="false"
+                ondragstart="drag(event)">A</button>
+            <button class="tecla" id="botonB" onclick="adivinarLetra('b')" draggable="false"
+                ondragstart="drag(event)">B</button>
+            <button class="tecla" id="botonC" onclick="adivinarLetra('c')" draggable="false"
+                ondragstart="drag(event)">C</button>
+            <button class="tecla" id="botonD" onclick="adivinarLetra('d')" draggable="false"
+                ondragstart="drag(event)">D</button>
+            <button class="tecla" id="botonE" onclick="adivinarLetra('e')" draggable="false"
+                ondragstart="drag(event)">E</button>
+            <button class="tecla" id="botonF" onclick="adivinarLetra('f')" draggable="false"
+                ondragstart="drag(event)">F</button>
+            <button class="tecla" id="botonG" onclick="adivinarLetra('g')" draggable="false"
+                ondragstart="drag(event)">G</button>
+            <button class="tecla" id="botonH" onclick="adivinarLetra('h')" draggable="false"
+                ondragstart="drag(event)">H</button>
+            <button class="tecla" id="botonI" onclick="adivinarLetra('i')" draggable="false"
+                ondragstart="drag(event)">I</button>
+            <button class="tecla" id="botonJ" onclick="adivinarLetra('j')" draggable="false"
+                ondragstart="drag(event)">J</button>
+            <button class="tecla" id="botonK" onclick="adivinarLetra('k')" draggable="false"
+                ondragstart="drag(event)">K</button>
+            <button class="tecla" id="botonL" onclick="adivinarLetra('l')" draggable="false"
+                ondragstart="drag(event)">L</button>
+            <button class="tecla" id="botonM" onclick="adivinarLetra('m')" draggable="false"
+                ondragstart="drag(event)">M</button>
+            <button class="tecla" id="botonN" onclick="adivinarLetra('n')" draggable="false"
+                ondragstart="drag(event)">N</button>
+            <button class="tecla" id="botonÑ" onclick="adivinarLetra('ñ')" draggable="false"
+                ondragstart="drag(event)">Ñ</button>
+            <button class="tecla" id="botonO" onclick="adivinarLetra('o')" draggable="false"
+                ondragstart="drag(event)">O</button>
+            <button class="tecla" id="botonP" onclick="adivinarLetra('p')" draggable="false"
+                ondragstart="drag(event)">P</button>
+            <button class="tecla" id="botonQ" onclick="adivinarLetra('q')" draggable="false"
+                ondragstart="drag(event)">Q</button>
+            <button class="tecla" id="botonR" onclick="adivinarLetra('r')" draggable="false"
+                ondragstart="drag(event)">R</button>
+            <button class="tecla" id="botonS" onclick="adivinarLetra('s')" draggable="false"
+                ondragstart="drag(event)">S</button>
+            <button class="tecla" id="botonT" onclick="adivinarLetra('t')" draggable="false"
+                ondragstart="drag(event)">T</button>
+            <button class="tecla" id="botonU" onclick="adivinarLetra('u')" draggable="false"
+                ondragstart="drag(event)">U</button>
+            <button class="tecla" id="botonV" onclick="adivinarLetra('v')" draggable="false"
+                ondragstart="drag(event)">V</button>
+            <button class="tecla" id="botonW" onclick="adivinarLetra('w')" draggable="false"
+                ondragstart="drag(event)">W</button>
+            <button class="tecla" id="botonX" onclick="adivinarLetra('x')" draggable="false"
+                ondragstart="drag(event)">X</button>
+            <button class="tecla" id="botonY" onclick="adivinarLetra('y')" draggable="false"
+                ondragstart="drag(event)">Y</button>
+            <button class="tecla" id="botonZ" onclick="adivinarLetra('z')" draggable="false"
+                ondragstart="drag(event)">Z</button>
+        </div>
+        <div class="botones">
+            <button class="resolverBoton" id="resolverBoton" onclick="resolverPalabra()">Resolver</button>
+            <button class="nuevaPartidaBoton" id="nuevaPartida" onclick="inicializarJuego()">Nueva Partida</button>
+        </div>
+    </div>
+
+    <div class="formulario" id="formulario">
+        <div id="contenedor">
+            <div id="titulo">¡Bienvenido al Juego del Ahorcado!</div>
+            <form action="pantallaPrincipal.html" onsubmit="return enviarDatos()">
+                <div id="jugadores">
+                    <div id="divJugador1">
+                        <label>Nombre del Jugador 1: <input type="text" name="nombreJug1" id="nombreJug1"
+                                maxlength="12"></label>
+                        <label>Selecciona un avatar:
+                            <div class="avatarContainer1" id="avatarContainer1">
+                                <img class="avatar" src="img/avatar1.png" onclick="seleccionarAvatar(1, this)">
+                                <img class="avatar" src="img/avatar2.png" onclick="seleccionarAvatar(1, this)">
+                                <img class="avatar" src="img/avatar3.png" onclick="seleccionarAvatar(1, this)">
+                                <img class="avatar" src="img/avatar4.png" onclick="seleccionarAvatar(1, this)">
+                            </div>
+                        </label>
+                    </div>
+                    <div id="vacio"></div>
+                    <div id="divJugador2">
+                        <label>Nombre del Jugador 2: <input type="text" name="nombreJug2" id="nombreJug2"
+                                maxlength="12"></label>
+                        <label>Selecciona un avatar:
+                            <div class="avatarContainer2" id="avatarContainer2">
+                                <img class="avatar" src="img/avatar1.png" onclick="seleccionarAvatar(2, this)">
+                                <img class="avatar" src="img/avatar2.png" onclick="seleccionarAvatar(2, this)">
+                                <img class="avatar" src="img/avatar3.png" onclick="seleccionarAvatar(2, this)">
+                                <img class="avatar" src="img/avatar4.png" onclick="seleccionarAvatar(2, this)">
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+                <div id="barra"></div>
+                <div id="selectsForm">
+                    <label for="selectCategoria">Escoge una categoría:</label>
+                    <select id="selectCategoria">
+                        <option id="películas">Películas</option>
+                        <option id="canciones">Canciones</option>
+                        <option id="informática">Informática</option>
+                    </select>
+                    <label for="selectNivel">Selecciona un nivel:</label>
+                    <select id="selectNivel" name="nivel">
+                        <option value="fácil">Fácil</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="difícil">Difícil</option>
+                    </select></br>
+                </div>
+                <button class="botonInicializarJuego" onclick="return validarFormulario()">Iniciar Juego</button>
+                <p id="errorMensaje"></p>
+            </form>
+        </div>
+    </div>
+    <script src="js/script_index.js"></script>
+</body>
+
+</html>

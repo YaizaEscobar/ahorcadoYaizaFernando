@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel='stylesheet' type='text/css' href='css/estilos_pantallaPrincipal.css'>
+</head>
+
+<body>
+    <div class="cuadrados">
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+    <div class="pantallaJuego">
+        <div id="jugador1">
+            <div id="avatarJ1"></div>
+            <div id="nombreJ1"></div>
+            <div id="puntuacionJ1">Puntuacion: 0</div>
+        </div>
+        <div id="infoSeleccion">
+            <span>Categoría:</span>
+            <div id="categoria"></div>
+            <span id="span_nivel">Nivel:</span>
+            <div id="nivel"></div>
+        </div>
+        <div id="jugador2">
+            <div id="avatarJ2"></div>
+            <div id="nombreJ2"></div>
+            <div id="puntuacionJ2">Puntuacion: 0</div>
+        </div>
+        <div class="imagen">
+            <img id="imagen" src="img/img0.png" alt="Ahorcado" />
+        </div>
+        <div id="turnoJugador"></div>
+        <div id="segundos"></div>
+        <div id="intentos">
+            Intentos restantes: <span id="intentosRestantes">6</span>
+        </div>
+        <div id="div_palabra_a_adivinar">
+            <div id="palabra_a_adivinar"></div>
+            <div id="mensaje_error"></div>
+        </div>
+        <div id="letrasIncorrectas">Letras Incorrectas</div>
+        <div id="teclado">
+            <button class="tecla" id="botonA" onclick="adivinarLetra('a')" draggable="false"
+                ondragstart="drag(event)">A</button>
+            <button class="tecla" id="botonB" onclick="adivinarLetra('b')" draggable="false"
+                ondragstart="drag(event)">B</button>
+            <button class="tecla" id="botonC" onclick="adivinarLetra('c')" draggable="false"
+                ondragstart="drag(event)">C</button>
+            <button class="tecla" id="botonD" onclick="adivinarLetra('d')" draggable="false"
+                ondragstart="drag(event)">D</button>
+            <button class="tecla" id="botonE" onclick="adivinarLetra('e')" draggable="false"
+                ondragstart="drag(event)">E</button>
+            <button class="tecla" id="botonF" onclick="adivinarLetra('f')" draggable="false"
+                ondragstart="drag(event)">F</button>
+            <button class="tecla" id="botonG" onclick="adivinarLetra('g')" draggable="false"
+                ondragstart="drag(event)">G</button>
+            <button class="tecla" id="botonH" onclick="adivinarLetra('h')" draggable="false"
+                ondragstart="drag(event)">H</button>
+            <button class="tecla" id="botonI" onclick="adivinarLetra('i')" draggable="false"
+                ondragstart="drag(event)">I</button>
+            <button class="tecla" id="botonJ" onclick="adivinarLetra('j')" draggable="false"
+                ondragstart="drag(event)">J</button>
+            <button class="tecla" id="botonK" onclick="adivinarLetra('k')" draggable="false"
+                ondragstart="drag(event)">K</button>
+            <button class="tecla" id="botonL" onclick="adivinarLetra('l')" draggable="false"
+                ondragstart="drag(event)">L</button>
+            <button class="tecla" id="botonM" onclick="adivinarLetra('m')" draggable="false"
+                ondragstart="drag(event)">M</button>
+            <button class="tecla" id="botonN" onclick="adivinarLetra('n')" draggable="false"
+                ondragstart="drag(event)">N</button>
+            <button class="tecla" id="botonÑ" onclick="adivinarLetra('ñ')" draggable="false"
+                ondragstart="drag(event)">Ñ</button>
+            <button class="tecla" id="botonO" onclick="adivinarLetra('o')" draggable="false"
+                ondragstart="drag(event)">O</button>
+            <button class="tecla" id="botonP" onclick="adivinarLetra('p')" draggable="false"
+                ondragstart="drag(event)">P</button>
+            <button class="tecla" id="botonQ" onclick="adivinarLetra('q')" draggable="false"
+                ondragstart="drag(event)">Q</button>
+            <button class="tecla" id="botonR" onclick="adivinarLetra('r')" draggable="false"
+                ondragstart="drag(event)">R</button>
+            <button class="tecla" id="botonS" onclick="adivinarLetra('s')" draggable="false"
+                ondragstart="drag(event)">S</button>
+            <button class="tecla" id="botonT" onclick="adivinarLetra('t')" draggable="false"
+                ondragstart="drag(event)">T</button>
+            <button class="tecla" id="botonU" onclick="adivinarLetra('u')" draggable="false"
+                ondragstart="drag(event)">U</button>
+            <button class="tecla" id="botonV" onclick="adivinarLetra('v')" draggable="false"
+                ondragstart="drag(event)">V</button>
+            <button class="tecla" id="botonW" onclick="adivinarLetra('w')" draggable="false"
+                ondragstart="drag(event)">W</button>
+            <button class="tecla" id="botonX" onclick="adivinarLetra('x')" draggable="false"
+                ondragstart="drag(event)">X</button>
+            <button class="tecla" id="botonY" onclick="adivinarLetra('y')" draggable="false"
+                ondragstart="drag(event)">Y</button>
+            <button class="tecla" id="botonZ" onclick="adivinarLetra('z')" draggable="false"
+                ondragstart="drag(event)">Z</button>
+        </div>
+        <audio id="audioVictoria" src="audio/audioVictoria.mp3" preload="auto"></audio>
+        <audio id="audioDerrota" src="audio/audioDerrota.mp3" preload="auto"></audio>
+        <audio id="audioLetraCorrecta" src="audio/audioLetraCorrecta.mp3" preload="auto"></audio>
+        <audio id="audioLetraIncorrecta" src="audio/audioLetraIncorrecta.mp3" preload="auto"></audio>
+        <div class="botones">
+            <button class="resolverBoton" id="resolverBoton" onclick="resolverPalabra()">Resolver</button>
+            <button class="nuevaPartidaBoton" id="nuevaPartida" onclick="inicializarJuego()">Nueva Partida</button>
+        </div>
+    </div>
+    <script src="js/script_pantallaPrincipal.js"></script>
+</body>
+
+</html>

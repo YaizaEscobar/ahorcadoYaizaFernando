@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='css/estilos_pantallaFinal.css'>
+    <title>Ranking</title>
+</head>
+
+<body>
+    <div class="cuadrados">
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+    <div class="contenedor">
+        <div>
+            <h1 id="enhorabuena">¡ENHORABUENA! El ganador es:</h1>
+            <div id="ganador"></div>
+        </div>
+        <div class="container">
+            <!--etiqueta canvas para crear la forma del ranking-->
+            <div id="canvas">
+                <canvas id="podioCanvas" width="250" height="250"></canvas>
+            </div>
+            <div class="ranking">
+                <h2>Ranking</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Nombre del Jugador</th>
+                            <th>Puntuación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td id="nombreGanador">Jugador1</td>
+                            <td id="puntosGanador">Puntos</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td id="nombreSegundo">Jugador2</td>
+                            <td id="puntosSegundo">Puntos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div id="segundos"></div>
+                <div class="botones">
+                    <form action="pantallaPrincipal.html">
+                        <input class="nuevaPartidaBoton" type="submit" value="Nueva Partida" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script_pantallaFinal.js"></script>
+</body>
+
+</html>
